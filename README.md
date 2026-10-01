@@ -2,6 +2,8 @@
 
 React and Vite website for Graceful Aging Care LLC.
 
+Website: [Graceful Aging Care LLC](https://gracefulagingcare.github.io/graceful-aging-care-charlotte/).
+
 ## Run locally
 
 Use Node.js 24, then run:
@@ -19,7 +21,7 @@ Run `npm run lint` to check the source code.
 1. In the repository's **Settings > Pages > Build and deployment**, set
    **Source** to **GitHub Actions**.
 2. Upload or commit this project's contents to the root of the `main` branch
-   of `Shaaat21/Graceful-Aging-Care-LLC-Licensed-amp-Insured-Nonmedical-Home-Care`. Include the `src/`, `public/`, and
+   of `GracefulAgingCare/graceful-aging-care-charlotte`. Include the `src/`, `public/`, and
    `.github/` folders along with `index.html`, `package.json`,
    `package-lock.json`, `vite.config.js`, `eslint.config.js`, `.gitignore`,
    and this README. Keep the folder structure; do not put everything inside
@@ -27,12 +29,18 @@ Run `npm run lint` to check the source code.
 3. Open **Actions > Deploy to GitHub Pages** and wait for a successful run.
    If the files were uploaded before Pages was enabled, choose **Run workflow**.
 4. Open the website URL shown in **Settings > Pages**. Without a custom domain,
-   it should be `https://shaaat21.github.io/Graceful-Aging-Care-LLC-Licensed-amp-Insured-Nonmedical-Home-Care/`.
+   it should be `https://gracefulagingcare.github.io/graceful-aging-care-charlotte/`.
 
 The workflow runs `npm ci`, builds with Vite, and publishes `dist/`. It reads
 the site's base path from GitHub Pages so asset URLs work at the repository
 path or at a configured custom domain. A `_config.yml` Jekyll theme does not
 build this React app and is not used by this workflow.
+
+After renaming or transferring the repository, run **Deploy to GitHub Pages**
+again. The built files contain the deployment's base path; an earlier build
+can still reference the old repository path and leave the page blank even
+when its HTML loads successfully. Also update the website URL in the
+repository's **About** settings.
 
 The custom domain `gracefulagingcare.com` also needs its own GitHub Pages and
 DNS configuration. Naming the repository after a domain does not connect it.
